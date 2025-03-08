@@ -106,12 +106,14 @@ function HomePage() {
         <p>Connect with trusted professionals in your area.</p>
       </header>
 
-      <SearchBar setSearchQuery={setSearchQuery} />
-      <CategoryFilter
-        categories={serviceCategories}
-        selectedCategory={selectedCategory}
-        setSelectedCategory={setSelectedCategory}
-      />
+      <div className="search-filter-container">
+        <SearchBar setSearchQuery={setSearchQuery} />
+        <CategoryFilter
+          categories={serviceCategories}
+          selectedCategory={selectedCategory}
+          setSelectedCategory={setSelectedCategory}
+        />
+      </div>
 
       <ProviderList providers={filteredProviders} />
     </div>
